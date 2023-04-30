@@ -1,6 +1,5 @@
 import tkinter as tk
 from PIL import Image, ImageTk
-import PIL
 
 
 #TODO - Convert between binary, decimal, hexidecimal and Octal -- Unfinished
