@@ -2,6 +2,7 @@ import tkinter as tk
 from PIL import Image, ImageTk
 
 
+
 #TODO - Convert between binary, decimal, hexidecimal and Octal -- Unfinished
 # - See a history of previous calculations limited to the current session of the app -- Unfinished
 # - Add more functions for the advanced arithmatic options -- DONE
@@ -72,6 +73,15 @@ class Calculator:
         self.logo_label = tk.Label(master, image=self.logo, bg='#ffffff')
         self.logo_label.grid(row=7, column=4, columnspan=4)
 
+        #history
+
+        self.num1 = None
+        self.operator = None
+        self.input_field_value = tk.StringVar()
+        self.history = []
+
+
+
     def create_button(self, text, row, col, columnspan=1, padx=5, pady=5, bg='#ffffff', fg='#ff0000'):
         button = tk.Button(self.master, text=text, width=5, height=2, font=('Arial', 16), command=lambda: self.button_click(text), bg=bg, fg=fg)
         button.grid(row=row, column=col, columnspan=columnspan, padx=padx, pady=pady)
@@ -115,13 +125,13 @@ class Calculator:
             elif text == 'Seconds to Days':
                 result = float(value) / 86400
             elif text == 'Decimal':
-                result = float(value) / 1
+                result = decimal(int(value))
             elif text == 'Binary':
-                result = float(value) / 2
+                result = bin(int(value))
             elif text == 'Octal':
-                result = float(value) / 3
+                result = oct(int(value))
             elif text == 'Hexidecimal':
-                result = float(value) / 4
+                result = hex(int(value))
             else:
                 result = 'Error'
         except:
