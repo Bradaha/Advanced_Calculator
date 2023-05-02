@@ -3,8 +3,7 @@ from PIL import Image, ImageTk
 
 
 
-#TODO - Convert between binary, decimal, hexidecimal and Octal -- Unfinished
-# - See a history of previous calculations limited to the current session of the app -- Unfinished
+#TODO - Convert between binary, decimal, hexidecimal and Octal -- DONE
 # - Add more functions for the advanced arithmatic options -- DONE
 # - Also clean up the GUI when I'm done pretty please.
 class Calculator:
