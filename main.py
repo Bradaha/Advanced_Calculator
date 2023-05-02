@@ -62,7 +62,7 @@ class Calculator:
 
         # load Raytheon logo
         logo_img = Image.open("raytheon_logo.png")
-        logo_img = logo_img.resize((175, 50), Image.ANTIALIAS)
+        logo_img = logo_img.resize((175, 50), Image.LANCZOS)
         self.logo = ImageTk.PhotoImage(logo_img)
         self.logo_label = tk.Label(master, image=self.logo, bg='#ffffff')
         self.logo_label.grid(row=7, column=4, columnspan=4)
