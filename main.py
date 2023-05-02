@@ -1,11 +1,6 @@
 import tkinter as tk
 from PIL import Image, ImageTk
 
-
-
-#TODO - Convert between binary, decimal, hexidecimal and Octal -- DONE
-# - Add more functions for the advanced arithmatic options -- DONE
-# - Also clean up the GUI when I'm done pretty please.
 class Calculator:
     def __init__(self, master):
         self.master = master
